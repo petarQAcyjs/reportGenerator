@@ -51,19 +51,21 @@ npx cypress open
 npm i mochawesome-report-generator
 ```
 
-6. Install charts
-7. 
+7.  Install charts
+
 ```bash
 npm install chart.js
 ```
 
-7. Run tests and generate report
+8. Run tests and generate report
 
 Run custom scripts made in package.json file (in my case the "withReport")
 
 ```bash
 npm run withReport
 ```
+
+9. Check the report file in the cypress\reports\html
 
 ## Contact Information
 For any queries or feedback regarding this project, please contact me at femicpetar@gmail.com
