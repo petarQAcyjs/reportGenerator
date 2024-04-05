@@ -3,13 +3,22 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "withReport": "cypress run --spec cypress/e2e/registerUserPass.cy.js,cypress/e2e/registerUserFail.cy.js && node cypress/fixtures/generateReport.js",
+    "passCountUp": "cypress run --spec cypress/e2e/registerUserPass.cy.js && node cypress/fixtures/generateReport.js",
+    "report": "node cypress/fixtures/generateReport.js"
   },
   "author": "",
   "license": "ISC",
   "keywords": [],
   "description": "",
   "devDependencies": {
-    "cypress": "^13.7.2"
+    "cypress": "^13.7.2",
+    "mochawesome": "^7.1.3"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.2",
+    "cypress-mochawesome-reporter": "^3.8.2"
   }
 }
